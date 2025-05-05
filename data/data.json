@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Apple iPhone",
+    "details": "These are the details about the Apple iPhone."
+  },
+  {
+    "id": 2,
+    "name": "Macbook Air ",
+    "details": "These are the details about the Macbook Air ."
+  },
+  {
+    "id": 3,
+    "name": "iMac",
+    "details": "This is the details for iMac."
+  },
+  {
+    "id": 4,
+    "name": "airpods",
+    "details": "This is the details for airpods."
+  },
+  {
+    "id": 5,
+    "name": "iPad",
+    "details": "This is the details for iPad."
+  },
+  {
+    "id": 6,
+    "name": "Mac Studio",
+    "details": "The Mac Studio is a small-form-factor workstation developed and marketed by Apple Inc."
+  }
+]
