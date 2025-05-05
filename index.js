@@ -21,7 +21,7 @@ app.post('/details', (req, res) => {
     // res.json ({message : `Hello ${name}`, email, age})
 })
 
-//route parameters -> are passed inside the url path; Example: GET /user/101
+
 //defining route parameters
 app.get('/details/:id', (req, res) => {
     const userId = req.params.id;  // :id becomes req.params.id
@@ -58,6 +58,7 @@ app.get('/search', (req, res) => {
         return res.status(404).send(`No products found with that name!`)
     }
 })
+
 //add the product to the data.json file using postman or web thingy
 app.post('/add', (req, res) => {
     const data = JSON.parse(fs.readFileSync(filePath, 'utf8'))
@@ -71,7 +72,6 @@ app.post('/add', (req, res) => {
     const newID = highestID + 1
 
     //check if all the fields are valid
-    
     if(!name || !details){
         res.status(400).send(`Please enter all the required fields!`)
     }
@@ -108,7 +108,6 @@ app.post('/add', (req, res) => {
 
 
 // remove the product using the id
-
 app.delete('/delete/:id', (req, res) => {
     const data = JSON.parse(fs.readFileSync(filePath, 'utf8'))
     const productID = parseInt(req.params.id)
