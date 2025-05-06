@@ -63,29 +63,12 @@ app.get('/search', (req, res) => {
 app.post('/add', (req, res) => {
     const data = JSON.parse(fs.readFileSync(filePath, 'utf8'))
     const {name, details} = req.body
-    const highestID = data.reduce(function(maxID, product){
-        if(product.id > maxID){
-            return product.id
-        }
-        return maxID
-    }, 0)
-    const newID = highestID + 1
+    
+    const newID = data.length + 1;
 
     //check if all the fields are valid
     if(!name || !details){
         res.status(400).send(`Please enter all the required fields!`)
-    }
-
-    //make sure that the id is unique
-    const isIdUnique = true
-    for(let i = 0; i<data.length;i++){
-        if(data[i].id === newID){
-            isIdUnique = false
-            break
-        }
-    }
-    if(!isIdUnique){
-        res.status(400).send(`Please make sure that the ID is unique`)
     }
 
     //add the product to the already existing array
